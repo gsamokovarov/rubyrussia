@@ -129,15 +129,15 @@ section.center data-background="#F00" data-background-transition="fade"
 
 section.center
   .fragment
-    p A debugger (or debugging tool) is a computer program that is used to test and debug other programs.
+    p A debugger (or <span class="red">Debugging tool</span>) is a computer program that is used to test and debug other programs.
     br
     a href="https://en.wikipedia.org/wiki/Debugger" https://en.wikipedia.org/wiki/Debugger
 
 section.center
-  h2 <span class="red">Debugging tool</span> <span class="fragment">🤔</span>
+  h2 <span class="fragment">🤔</span>
 
 section.center
-  h2.fragment Kernel#puts <span class="fragment">😅</span>
+  h2.fragment Kernel#puts
 
 section.center
   h2 👍
@@ -200,12 +200,6 @@ section.center
   pre(contenteditable=true): code.ruby
     '
       require "debug"
-
-section.center
-  p Written in plain Ruby!
-
-section.center data-background="#000"
-  p.white Written in plain Ruby!
 
 section.center data-background-iframe="/console"
   a(href="#" class="navigate-next") &gt;
@@ -302,9 +296,6 @@ section.center
 
 section.center
   p Soft deprecated in favour of the more modern <span class="red">TracePoint</span> API.
-
-section.center data-background="#000"
-  p.white.fragment Clearly, it's possible to write debuggers in Ruby...
 
 section.center data-background="#000" data-background-transition="none"
   p.white Why is <span class="red">Byebug</span> written in C?
@@ -427,6 +418,12 @@ section.center
 section.center
   p An old debugger for <span class="red">Ruby 1.8</span> and, eventually, <span class="red">Ruby 1.9</span>.
 
+section.center
+  img.inline src="https://upload.wikimedia.org/wikipedia/commons/1/1a/JetBrains_Logo_2016.svg"
+
+section.center
+  h1 🙇‍♂️
+
 section.center data-background="#FFF"
   h3 Ruby 1.8
   a href="https://github.com/ruby-debug/ruby-debug" github.com/ruby-debug/ruby-debug
@@ -456,6 +453,9 @@ section.center
 
 section.center
   p Writing debuggers back in the days was way more convoluted. 👵
+
+section.center data-background="#F0F"
+  h2.white C
 
 section.center data-background="#F00"
   h2.white Post-Mortem Debugging
@@ -572,7 +572,7 @@ section.center
   = copyright "skiptrace", "https://github.com/gsamokovarov/skiptrace"
 
 section.center data-background="#000"
-  h2.white High-level APIs
+  h2.white Editorial
 
 section.center
   p <span class="red">TracePoint</span> is a high-level API.
@@ -735,20 +735,23 @@ section.center
     li.fragment Portable debugging tools!
     li.fragment Adoption!
 
-section.center data-background="#000"
-  h2.white.fragment 🤲
+section.center
+  a href="https://bugs.ruby-lang.org/issues/15778" bugs.ruby-lang.org/issues/15778
+
+section.center
+  img.inline src=image_path("ko1_support.png")
 
 section.center data-background="#000" data-background-transition="none"
   h2.white 😎
 
 section.center data-background="#000" data-background-transition="none"
-  h2.white boogah
+  h2.white break
 
 section.center
   p Proof of concept debugger written using the <span class="red">TracePoint API</span> in plain <span class="red">Ruby</span>.
 
 section.center
-  p Not production ready, purely for educational purposes.
+  p Integrates into binding.irb and binding.pry
 
 section.center data-background-iframe="/console"
   a(href="#" class="navigate-next") &gt;
@@ -757,8 +760,8 @@ section.center
   pre.fragment(contenteditable=true): code.ruby
     '
       class Binding
-        def boogah
-          context = Boogah::Context.new(self)
+        def break
+          context = Break::Context.new(self)
           context.start
         end
       end
@@ -766,11 +769,11 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      class Boogah::Context
+      class Break::Context
         attr_accessor :frames, :depth
 
         def initialize(*frames, depth: 0)
-          @frames,@depth = frames, depth
+          @frames, @depth = frames, depth
           @repl = REPL.new(current_binding)
         end
 
@@ -787,7 +790,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      class Boogah::REPL
+      class Break::REPL
         def initialize(binding)
           IRB.setup(caller_locations.first.path, argv: [])
 
@@ -797,7 +800,7 @@ section.center
         end
 
         def start(context)
-          @binding.receiver.singleton_class.prepend(Boogah::Commands.new(context))
+          @binding.receiver.singleton_class.prepend(Break::Commands.new(context))
           @irb.run(IRB.conf)
         end
 
@@ -809,7 +812,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      class Boogah::Commands < Module
+      class Break::Commands < Module
         def initialize(current)
           Dir.each_child current_directory.join("commands") do |cmd|
             require_command { "commands/\#{cmd}" }
@@ -912,8 +915,8 @@ section.center
       end
 
 section.center
-  a href="https://github.com/gsamokovarov/boogah" github.com/gsamokovarov/boogah
-  p gem install boogah
+  a href="https://github.com/gsamokovarov/break" github.com/gsamokovarov/break
+  p gem install break
 
 section.center data-background="#000"
   h2.white.fragment TL;DR

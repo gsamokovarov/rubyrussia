@@ -41,7 +41,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   # Inline byebug and IRB/Pry sessions directly in the presentation.
-  gem 'rvt', path: '../../rvt'
+  gem 'rvt'
 end
 
 group :test do

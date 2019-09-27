@@ -2,19 +2,6 @@ section.center
   h2 👋
 
 section.center
-  h2 Здравствуйте
-
-section.center
-  img.inline src=image_path("me.png")
-  h2 Генади Самоковаров
-
-section.center.fragment
-  h2 <strike>Здравствуйте</strike>
-
-section.center
-  h2 Здравейте
-
-section.center
   img.inline src=image_path("me.png")
   h2 Генади Самоковаров
 
@@ -28,8 +15,9 @@ section.center
 section.center
   a(href="https://github.com/gsamokovarov") github.com/gsamokovarov
 
-section.center data-background-iframe="https://www.receipt-bank.com/us/"
-  a(href="#" class="navigate-next") &gt;
+section.center
+  a href="https://receipt-bank.com"
+    img.inline src="https://www.receipt-bank.com/us/wp-content/themes/receipt-bank/dist/images/rb-logo.svg"
 
 section.center data-background="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/2000px-Flag_of_Bulgaria.svg.png"
   h2.white.shadow Bulgaria
@@ -53,6 +41,10 @@ section.center data-background="https://upload.wikimedia.org/wikipedia/commons/e
   h2.white.shadow Sunny Beach
   = copyright "Wikipedia", "https://en.wikipedia.org/wiki/Sunny_Beach"
 
+section.center data-background="https://upload.wikimedia.org/wikipedia/commons/7/7e/Veleka-sinemorets-mouth-dinev.jpg"
+  h2.white.shadow Sinemorets
+  = copyright "Wikipedia", "https://en.wikipedia.org/wiki/Sinemorets"
+
 section.center data-background="https://cdn2.wanderlust.co.uk/media/2637/articles-public-mineral-baths-sofia-bulgaria-dreamstime.jpg"
   h2.white.shadow Sofia
   = copyright "Wanderlust", "https://www.wanderlust.co.uk/content/short-break-guide-to-sofia-bulgaria/"
@@ -69,37 +61,9 @@ section.center data-background="#FCD846"
 section.center data-background="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg"
   h2.white.shadow Russia
 
-section data-background="https://processflows.co.uk/wp-content/blogs.dir/1/files/2015/01/bpoFotolia_29276575_M-1.jpg"
-  h2.white.shadow.fragment Цар Освободител
-  = copyright "Wikipedia", "https://en.wikipedia.org/wiki/Alexander_II_of_Russia"
-
-section data-background="https://processflows.co.uk/wp-content/blogs.dir/1/files/2015/01/bpoFotolia_29276575_M-1.jpg"
-  h2.white.shadow Цар Александър II
-  = copyright "Wikipedia", "https://en.wikipedia.org/wiki/Alexander_II_of_Russia"
-
-section data-background="https://upload.wikimedia.org/wikipedia/commons/1/14/Tsar_Alexander_II_1881.jpg"
-  = copyright "Wikipedia", "https://en.wikipedia.org/wiki/Alexander_II_of_Russia"
-
-section.center data-background="http://popkult.org/wp-content/uploads/2017/01/masha_i_medved_1-1.jpg"
-  = copyright "Wikipedia", "https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%88%D0%B0_%D0%B8_%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C"
-
-section.center data-background="https://upload.wikimedia.org/wikipedia/commons/d/d3/Gaudi_arena.jpg"
-  h2.white.shadow Тату
-  = copyright "Wikipedia", "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D1%82%D1%83_(%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0)"
-
-section.center data-background="https://www.foxsportsasia.com/uploads/2018/11/VP.jpg"
-  = copyright "Liquipedia", "https://liquipedia.net/dota2/Virtus.pro"
-
-section.center data-background="https://i.ytimg.com/vi/QIjKijhv1OU/maxresdefault.jpg"
-  = copyright "YouTube", "https://www.youtube.com/user/NocturnoPlays"
-
 section.center data-background=image_path("bearhug.gif")
-section.center data-background="https://1.bp.blogspot.com/-3qWb21vq4Jo/Wx1BzowhEcI/AAAAAAAA8Fc/o48X7L48KdgcUecPnA2r2K2JH-FO4xnZwCLcBGAs/s1600/%25D0%25A0%25D0%2590%25D0%259B%25D0%2598%2B%25D0%25BC%25D0%25BE%25D1%2581%25D0%25BA%25D0%25B2%25D0%25B8%25D1%2587%25D0%25B8%2B1.jpg"
 
 section.center data-background="http://24-7-365.ru/image/cache/catalog/vodki_nastoyki_nalivki_213/3163949H-800x800.jpg"
-  = copyright "Wikipedia", "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D0%BA%D0%B0"
-
-section.center data-background="https://www.ebag.bg/product/12885/images/0/800"
   = copyright "Wikipedia", "https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D0%BA%D0%B0"
 
 section.center data-background="https://s12emagst.akamaized.net/products/14822/14821377/images/res_daa1ea5551b2643bfebb8668f6cbbc2a_full.jpg"
@@ -114,9 +78,29 @@ section.center data-background="https://upload.wikimedia.org/wikipedia/commons/e
 section.center data-background="https://media.gettyimages.com/photos/north-korean-president-kim-il-sung-and-his-bulgarian-counterpart-picture-id544759487"
   h2.white.shadow ☭
 
+section.center data-background="https://boscofamily.ru/upload/iblock/811/bsk_3877_zakhod16.jpg"
+  h2.white.shadow.fragment $
+
+section.center data-background="#000"
+
+section.center data-background=image_path("russialove.jpg")
+section.center data-background=image_path("rubyrussia.png")
+
 section.center data-background="#F00"
   h2.white.fragment Break
   h4.white.fragment debugger in plain Ruby
+
+section.center
+  p This talk is about <span class=fragment>more than</span> a debugger.
+
+section.center
+  p 💡
+
+section.center
+  p Writing tooling in Ruby itself is a <span class="red">virtue</span>!
+
+section.center
+  p 💌
 
 section
   h2 Agenda
@@ -153,17 +137,20 @@ section.center data-background-iframe="https://tenderlovemaking.com/2016/02/05/i
   a(href="#" class="navigate-next") &gt;
 
 section.center
-  h2 Object#pry
+  h2 binding.pry
   = copyright "pry", "https://github.com/pry/pry"
 
 section.center
-  h2 Binding#irb
+  h2 binding.irb
 
 section.center
   h2 👌
 
 section.center
-  h2.fragment Debase & Byebug
+  h2.fragment Debase
+
+section.center
+  h2 Byebug
 
 section.center
   a href="https://tenderlovemaking.com/2016/02/05/i-am-a-puts-debuggerer.html" Real™️  Debuggers! 😂
@@ -189,7 +176,7 @@ section.center data-background-iframe="/console"
 section.center data-background="#00F"
   h2.white A history of Ruby debuggers 🇷🇺
 
-section.center data-background="#000"
+section.center data-background="#00F"
   h2.fragment.white debug.rb
 
 section.center
@@ -205,9 +192,6 @@ section.center
   pre(contenteditable=true): code.ruby
     '
       require "debug"
-
-section.center data-background-iframe="/console"
-  a(href="#" class="navigate-next") &gt;
 
 section.center
   h2 😀
@@ -299,8 +283,8 @@ section.center
         end
       }
 
-section.center
-  p Soft deprecated in favour of the more modern <span class="red">TracePoint</span> API.
+section.center data-background="#000" data-background-transition="none"
+  p.white.fragment Why is <span class="red">Debase</span> written in C?
 
 section.center data-background="#000" data-background-transition="none"
   p.white Why is <span class="red">Byebug</span> written in C?
@@ -316,6 +300,9 @@ section.center
 
 section.center
   p Invokes the proc for any event, even if you don't need to listen to it.
+
+section.center
+  p Soft deprecated in favour of the more modern <span class="red">TracePoint</span> API.
 
 section.center data-background="#000"
   h2.white TracePoint API
@@ -408,8 +395,11 @@ section.center
   h3 fiber_switch
   p event hook at fiber switch
 
-section.center
+section.center data-background="#000"
   h2 🤔
+
+section.center data-background="#000"
+  p.white How did <span class="red">TracePoint</span> came to be?
 
 section.center
   h2 ruby-debug
@@ -455,7 +445,6 @@ section.center
 
 section.center
   p Writing debuggers back in the days was way more convoluted. 👵
-
 
 section.center data-background="#F00"
   h2.white Musings about the Ruby debugging APIs 🤔
@@ -675,7 +664,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      backtrace = caller_locations
+      backtrace = caller_locations(debug: true)
       if trace = backtrace[3]
         # C frames cannot build binding.
         trace.binding
@@ -684,7 +673,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      backtrace = caller_locations
+      backtrace = caller_locations(debug: true)
       if trace = backtrace[3]
         # Have optimizing VM like JRuby or TruffleRuby?
         trace.binding
@@ -693,7 +682,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      backtrace = caller_locations
+      backtrace = caller_locations(debug: true)
       if trace = backtrace[3]
         # Return nil for for such frames.
         trace.binding
@@ -702,7 +691,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      backtrace = caller_locations
+      backtrace = caller_locations(debug: true)
       if trace = backtrace[3]
         # Produce a warning, if you wish.
         trace.binding
@@ -711,7 +700,7 @@ section.center
 section.center
   pre(contenteditable=true): code.ruby
     '
-      backtrace = caller_locations
+      backtrace = caller_locations(debug: true)
       if trace = backtrace[3]
         # No need for trace <=> binding mapping!
         trace.binding
@@ -724,7 +713,7 @@ section.center data-background="#000"
   p.white The APIs can be implemented by the VM maintainers.
 
 section.center data-background="#000" data-background-transition="none"
-  p.white The debuggers can become, more or less, UX work that is portable across VMs.
+  p.white The debuggers can become UX work that is portable across VMs.
 
 section.center data-background="#000" data-background-transition="none"
   h2.white Pros & Cons
@@ -747,6 +736,9 @@ section.center
 section.center
   img.inline src=image_path("ko1_support.png")
 
+section.center
+  img.inline src=image_path("debuggers_hope.png") width="1200px"
+
 section.center data-background="#000" data-background-transition="none"
   h2.white 😎
 
@@ -760,13 +752,31 @@ section.center
   p Wears the Ruby-only label with pride and considers it a virtue!
 
 section.center
-  p Don't support post-mortem debugging and arbitrary frame jumping, because of that.
+  p Doesn't support post-mortem debugging...
 
 section.center
-  p Provides basic execution handling control – step into, step over, etc.
+  p Doesn't support arbitrary frame jumping...
 
 section.center
-  p Does not have own frontned, but integrates straight into binding.irb and binding.pry!
+  p Ruby does not have APIs for that!
+
+section.center
+  p Provides basic execution handling control!
+
+section.center
+  p Step-into a method...
+
+section.center
+  p Step-out of a method...
+
+section.center
+  p Step-over a method...
+
+section.center
+  p Does not have own frontend!
+
+section.center
+  p Integrates straight into binding.irb and binding.pry!
 
 section.center data-background-iframe="/console"
   a(href="#" class="navigate-next") &gt;
@@ -775,7 +785,7 @@ section.center
   pre(contenteditable=true): code.ruby
     '
       class Break::Context
-        attr_accessor :bindings :depth
+        attr_accessor :bindings, :depth
 
         def initialize(*bindings, depth: 0)
           @bindings = bindings
@@ -876,58 +886,8 @@ section.center
       end
 
 section.center
-  pre(contenteditable=true): code.ruby
-    '
-      class Break::UpCommand < Break::TracePointCommand
-        def execute(*)
-          return super if context.bindings[context.depth - 2]
-          frontend.notify("Cannot go further up the stack")
-        end
-
-        def execute_trace(trace, *)
-          trace.disable
-
-          context!(*context.bindings, depth: context.depth - 1)
-        end
-      end
-
-section.center
-  pre(contenteditable=true): code.ruby
-    '
-      class Break::DownCommand < Break::TracePointCommand
-        def execute(*)
-          if context.depth >= 0
-            return frontend.notify("Cannot go further down the stack")
-          else
-            super
-          end
-        end
-
-        def execute_trace(trace, *)
-          trace.disable
-
-          context!(*context.bindings, depth: context.depth + 1)
-        end
-      end
-
-section.center
   a href="https://github.com/gsamokovarov/break" github.com/gsamokovarov/break
   p gem install break
-
-section.center data-background="#000"
-  h2.white.fragment TL;DR
-
-section.center data-background="#000" data-background-transition="none"
-  p.white Writing debuggers may seem daunting, but we have great APIs to do so.
-
-section.center data-background="#000" data-background-transition="none"
-  p.white With a little bit of effort, we can remove the need of lower-level code altogether.
-
-section.center data-background="#000" data-background-transition="none"
-  p.white Debuggers can be mostly UX work.
-
-section.center data-background="#000" data-background-transition="none"
-  p.white Debuggers can be portable.
 
 section data-background="https://3.bp.blogspot.com/-qnppiAuAXV4/VUyfpPDwPsI/AAAAAAAAAi0/uPp7S7aLVt8/s1600/%D0%92%2B%D0%BA%D1%80%D0%B0%D0%BA%2B%D1%81%2B%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D1%82%D0%BE%2B1.jpg"
   h2.shadow.fragment Thank you!

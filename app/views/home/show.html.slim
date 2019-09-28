@@ -302,6 +302,16 @@ section.center
   p Invokes the proc for any event, even if you don't need to listen to it.
 
 section.center
+  pre(contenteditable=true): code.ruby
+    '
+      set_trace_func -> event, file, line, id, binding {
+        case event
+        when "return"
+          # A Ruby method returns.
+        end
+      }
+
+section.center
   p Soft deprecated in favour of the more modern <span class="red">TracePoint</span> API.
 
 section.center data-background="#000"

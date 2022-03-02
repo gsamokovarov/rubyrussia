@@ -2,6 +2,6 @@
   "name": "kaigi18",
   "private": true,
   "dependencies": {
-    "reveal.js": "^3.9.2"
+    "reveal.js": "^4.3.0"
   }
 }
